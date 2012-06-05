@@ -1,6 +1,6 @@
 # Facebook Base
 
-This is a handy set of files that lets you get going with a Facebook app quickly.
+This is a handy set of files that lets you get going with a Facebook app quickly. It is an extension of, and includes, my [Base](https://github.com/davidfitzgibbon/base) boilerplate for websites.
 
 It's still not layed out very well so any forks or comments are welcome!
 
