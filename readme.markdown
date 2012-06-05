@@ -8,7 +8,7 @@ It's still not layed out very well so any forks or comments are welcome!
 
 
 
-# How to
+# How to:
 
 ## _index.php_
 
@@ -37,7 +37,7 @@ Next it sets the $like and $fbuser variables. These can be used to create a "Lik
 
 Some other useful variables are gathered in this file too.
 
-## use
+## _use_
 
 After these files have run you will have access to the following variables:
 
@@ -49,13 +49,14 @@ After these files have run you will have access to the following variables:
 
 
 # Required:
+The following technologies are needed to get the most out of the SASS framework that's included with these files. However you can also simple delete the sass folder and config.rb to develop your site just in plain ol' CSS
 
-## SASS
+### SASS
 http://sass-lang.com/tutorial.html
 
-## COMPASS
+### COMPASS
 http://compass-style.org/install/
 
-## SUSY
+### SUSY
 http://susy.oddbird.net/guides/getting-started/
 
