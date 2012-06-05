@@ -4,31 +4,32 @@
 	include 'includes/mobile_detect.php'; 
 	include 'includes/facebook.php';  
 
-	//sklgjbsdkjgb
-
+	// DEFAULT PAGE
 	$page = 'blank';
 	$time = time();
 
-	/* USER IS ON FACEBOOK */
+	// USER IS ON FACEBOOK
 	if($isfb == true) {
 
-		/* PAGE IS LIKED */
+		// PAGE IS LIKED
 		if($like != true){ 
 			$page = 'like'; 
 		} else {
-			/* USER IS LOGGED INTO APP */
+			// USER IS LOGGED INTO APP
 			if($fbuser != false){ 
 				$page = 'info';
 			}
 		}
 	}
 
+	// IF PAGE IS SET AS A GET VARIABLE IN THE URL
 	if(isset($_GET['page'])){ $page = $_GET['page']; } 
 
-	/* TIME GATE FOR THE APP */
+	// TIME GATE FOR THE APP
 	// if (time() < strtotime('2012-02-05')) { $page = 'like'; }
 	// if (time() > strtotime('2012-04-30')) { $page = 'closed'; }
 
+	// GET THE CORRECT PAGE
 	$page = $page.'.php';
 ?>
 <!doctype html>
@@ -61,6 +62,7 @@
          ref.parentNode.insertBefore(js, ref);
 	   }(document));
 
+	  // inititalise FB. Make sure the channel file is being pointed to for cross domain access
 	  window.fbAsyncInit = function() {
 		FB.init({
 		  appId      : '<?=$appId?>', // App ID
@@ -71,10 +73,11 @@
 		  xfbml      : true  // parse XFBML
 		});
 		
-		/* CAUSES THE IFRAME TO RESIZE  */
+		// CAUSES THE IFRAME TO RESIZE TO THE HEIGHT OF YOUR APP
 		FB.Canvas.setAutoResize(100);
 		FB.Canvas.scrollTo(0,0);
 
+		// IF THE USER ISNT LOGGED INTO FACEBOOK, MAKE THEM LOG IN
 		<?php 
 		if($fbuser == false){
 		?>
@@ -92,7 +95,7 @@
 		?>
 
 		
-
+		// POST TO WALL
 		<?php if(isset($_GET['page']) && $_GET['page'] == 'thanks' ){ ?>
 			FB.ui({
 				method: 'feed',
@@ -110,7 +113,7 @@
 
 </head>
 
-<body id="<?=$language?>" class="<?=$stripped_page?>">
+<body>
 
 	<div id="container">
 	
@@ -141,15 +144,15 @@
 	  <script type="text/javascript" src="js/selectivizr.js"></script>
 	<![endif]-->
 
-	<!-- FB ROOT DIV -->
+	<!-- FB ROOT DIV - THIS IS ESSENTIAL -->
 	<div id="fb-root"></div>
 
-	<!-- track pages -->
+	<!-- track pages with Google Analytics-->
 	<script type="text/javascript">
 
 	  // var _gaq = _gaq || [];
-	  // _gaq.push(['_setAccount', 'UA-2014879-77']);
-	  // _gaq.push(['_trackPageview', '/tracking/<?= $stripped_page ?>']);
+	  // _gaq.push(['_setAccount', 'UA-your-code']);
+	  // _gaq.push(['_trackPageview', '/tracking/<?= $page ?>']);
 
 	  // (function() {
 	  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

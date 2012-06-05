@@ -58,10 +58,9 @@ if($mobile == 0){
 		}
 		$pageId = $_SESSION['pageId'];
 
+		// THESE VARIABLES CAN BE USED TO SEND THE USER BACK TO THE APP WHEN BEING LOGGED IN / APPROVING APP / OTHER TRICKERY WHERE THEY HAVE TO LEAVE THE SITE
 		$state = rand(100000, 999999);
-
 		$redirectUrl = "https%3A%2F%2Fwww.facebook.com%2Fpages%2Fnull%2F$pageId%2Fapp_$appId";
-
 		$loginUrl = urldecode("https://www.facebook.com/dialog/oauth?client_id=$appId&redirect_url=$redirectUrl&state=$state");
 
 		// SEE IF PAGE IS LIKED

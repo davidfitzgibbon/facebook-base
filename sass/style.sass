@@ -5,7 +5,7 @@ $white: #fff
 
 /* FONT SETTINGS */
 $fs: 16px
-$lh: 20px
+$lh: 24px
 $gap: $lh
 
 @import 'includes' 
@@ -13,8 +13,14 @@ $gap: $lh
 @mixin sans
 	font-family: sans-serif
 
+*
+	+border-box
+
 body
+	font-size: em($fs)
+	line-height: em($lh)
 	
 	#container
-		@include container 
-		@include island
+		+container 
+		+island
+		+sans 

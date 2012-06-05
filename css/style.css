@@ -53,7 +53,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* EM CALCULATOR */
 /* BOILERPLATE HELPERS */
 .island {
-  margin-bottom: 20px; }
+  margin-bottom: 24px; }
   .island > :last-child {
     margin-bottom: 0; }
 
@@ -119,15 +119,99 @@ button, input, select, textarea {
   vertical-align: baseline;
   *vertical-align: middle; }
 
-body #container {
-  *zoom: 1;
-  margin: auto;
-  width: 520px;
-  max-width: 100%;
-  margin-bottom: 20px; }
-  body #container:after {
-    content: "";
-    display: table;
-    clear: both; }
-  body #container > :last-child {
-    margin-bottom: 0; }
+#container {
+  background-image: url(../img/grid/grid.gif);
+  background-size: 16px 24px; }
+
+body {
+  width: 100%; }
+
+body::after {
+  color: black;
+  content: "0 - 19em";
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 42px;
+  background: lightgreen;
+  clear: both;
+  overflow: auto;
+  line-height: 42px;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold; }
+  @media (min-width: 20em) {
+    body::after {
+      content: "20em - 24em";
+      background: orange; } }
+  @media (min-width: 25em) {
+    body::after {
+      content: "25em - 29em";
+      background: orange; } }
+  @media (min-width: 30em) {
+    body::after {
+      content: "30em - 34em";
+      background: orange; } }
+  @media (min-width: 35em) {
+    body::after {
+      content: "35em - 39em";
+      background: orange; } }
+  @media (min-width: 40em) {
+    body::after {
+      content: "40em - 44em";
+      background: orange; } }
+  @media (min-width: 45em) {
+    body::after {
+      content: "45em - 49em";
+      background: orange; } }
+  @media (min-width: 50em) {
+    body::after {
+      content: "50em - 54em";
+      background: orange; } }
+  @media (min-width: 55em) {
+    body::after {
+      content: "55em - 59em";
+      background: orange; } }
+  @media (min-width: 60em) {
+    body::after {
+      content: "60em - 64em";
+      background: orange; } }
+  @media (min-width: 65em) {
+    body::after {
+      content: "65em - 69em";
+      background: orange; } }
+  @media (min-width: 70em) {
+    body::after {
+      content: "70em - 74em";
+      background: orange; } }
+  @media (min-width: 75em) {
+    body::after {
+      content: "75em - 79em";
+      background: orange; } }
+  @media (min-width: 80em) {
+    body::after {
+      content: "80em +";
+      background: red; } }
+
+* {
+  -moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1em;
+  line-height: 1.5em; }
+  body #container {
+    *zoom: 1;
+    margin: auto;
+    width: 520px;
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-family: sans-serif; }
+    body #container:after {
+      content: "";
+      display: table;
+      clear: both; }
+    body #container > :last-child {
+      margin-bottom: 0; }
