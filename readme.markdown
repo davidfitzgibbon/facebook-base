@@ -42,9 +42,13 @@ Some other useful variables are gathered in this file too.
 After these files have run you will have access to the following variables:
 
 *$mobile* - if greater than 0, user is on a mobile device
+
 *$fbuser* - contains the output of the Facebook Graph information on the user including their name, age, language and other pieces of information
+
 *$name* - The users name
+
 *$like* - Is the page liked or not
+
 *$language* - the users preferred language
 
 
