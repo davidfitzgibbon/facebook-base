@@ -11,10 +11,10 @@ $config['secret'] = $secret;
 
 include 'php-sdk/src/facebook.php';
 
-$like = NULL;
-$facebook_user = NULL;
-
 $facebook = new Facebook($config);
+
+$like = NULL;
+$fbuser = NULL;
 
 if($mobile == 0){
 	if(isset($_REQUEST['signed_request'])){

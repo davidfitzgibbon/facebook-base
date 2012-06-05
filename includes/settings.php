@@ -3,8 +3,8 @@
 // add page http://www.facebook.com/dialog/pagetab?app_id=186432734794033&next=http://facebook.lightbox.ie/bolt/
 
 
-$appId = '186432734794033';
-$secret = 'bab420c1981f31de7afebb690aced22c';
+$appId = '';
+$secret = '';
 
 $env = 'live';
 
@@ -51,4 +51,5 @@ $mysqli = new mysqli($server, $user, $pass, $db);
 // // show errors (remove this line if on a live site)
 mysqli_report(MYSQLI_REPORT_ERROR);
 
-$v=8;
+// use this to cache bust Facebook for your CSS and JS files
+$v=0;
